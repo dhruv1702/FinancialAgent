@@ -23,4 +23,4 @@ def store_embeddings(chunked_data, model, client):
                 "content": chunk,
                 "embedding": embedding
             }
-            client.table("sec_500").insert(data).execute()
+            client.table("top50").insert(data).execute()
