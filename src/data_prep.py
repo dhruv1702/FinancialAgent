@@ -3,7 +3,7 @@ from sentence_transformers import SentenceTransformer
 from langchain.text_splitter import MarkdownTextSplitter
 
 def chunk_markdown_files(directory):
-    splitter = MarkdownTextSplitter(chunk_size=1500, chunk_overlap=100)
+    splitter = MarkdownTextSplitter(chunk_size=4000, chunk_overlap=200)
     chunked_data = {}
     for filename in os.listdir(directory):
         if filename.endswith(".md"):
